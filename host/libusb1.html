@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module libusb1</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">libusb1</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cjosh%5Cappdata%5Croaming%5Cpython%5Cpython312%5Csite-packages%5Clibusb1.py">c:\users\josh\appdata\roaming\python\python312\site-packages\libusb1.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="ctypes.html">ctypes</a><br>
+<a href="errno.html">errno</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+<a href="platform.html">platform</a><br>
+</td><td class="multicolumn"><a href="sys.html">sys</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-Lock"><strong>Lock</strong></a> = allocate_lock(...)</dt><dd><span class="code">allocate_lock()&nbsp;-&gt;&nbsp;lock&nbsp;object<br>
+(allocate()&nbsp;is&nbsp;an&nbsp;obsolete&nbsp;synonym)<br>
+&nbsp;<br>
+Create&nbsp;a&nbsp;new&nbsp;lock&nbsp;object.&nbsp;See&nbsp;help(type(threading.<a href="#-Lock">Lock</a>()))&nbsp;for<br>
+information&nbsp;about&nbsp;locks.</span></dd></dl>
+ <dl><dt><a name="-POINTER"><strong>POINTER</strong></a>(...)</dt></dl>
+ <dl><dt><a name="-addressof"><strong>addressof</strong></a>(...)</dt><dd><span class="code"><a href="#-addressof">addressof</a>(C&nbsp;instance)&nbsp;-&gt;&nbsp;integer<br>
+Return&nbsp;the&nbsp;address&nbsp;of&nbsp;the&nbsp;C&nbsp;instance&nbsp;internal&nbsp;buffer</span></dd></dl>
+ <dl><dt><a name="-pointer"><strong>pointer</strong></a>(...)</dt></dl>
+ <dl><dt><a name="-sizeof"><strong>sizeof</strong></a>(...)</dt><dd><span class="code"><a href="#-sizeof">sizeof</a>(C&nbsp;type)&nbsp;-&gt;&nbsp;integer<br>
+<a href="#-sizeof">sizeof</a>(C&nbsp;instance)&nbsp;-&gt;&nbsp;integer<br>
+Return&nbsp;the&nbsp;size&nbsp;in&nbsp;bytes&nbsp;of&nbsp;a&nbsp;C&nbsp;instance</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>LIBUSB_5GBPS_OPERATION</strong> = 8<br>
+<strong>LIBUSB_BT_CONTAINER_ID_SIZE</strong> = 20<br>
+<strong>LIBUSB_BT_PLATFORM_DESCRIPTOR_MIN_SIZE</strong> = 20<br>
+<strong>LIBUSB_BT_SSPLUS_USB_DEVICE_CAPABILITY_SIZE</strong> = 12<br>
+<strong>LIBUSB_BT_SS_USB_DEVICE_CAPABILITY_SIZE</strong> = 10<br>
+<strong>LIBUSB_BT_USB_2_0_EXTENSION_SIZE</strong> = 7<br>
+<strong>LIBUSB_CAP_HAS_CAPABILITY</strong> = 0<br>
+<strong>LIBUSB_CAP_HAS_HID_ACCESS</strong> = 256<br>
+<strong>LIBUSB_CAP_HAS_HOTPLUG</strong> = 1<br>
+<strong>LIBUSB_CAP_SUPPORTS_DETACH_KERNEL_DRIVER</strong> = 257<br>
+<strong>LIBUSB_CLASS_APPLICATION</strong> = 254<br>
+<strong>LIBUSB_CLASS_AUDIO</strong> = 1<br>
+<strong>LIBUSB_CLASS_COMM</strong> = 2<br>
+<strong>LIBUSB_CLASS_CONTENT_SECURITY</strong> = 13<br>
+<strong>LIBUSB_CLASS_DATA</strong> = 10<br>
+<strong>LIBUSB_CLASS_DIAGNOSTIC_DEVICE</strong> = 220<br>
+<strong>LIBUSB_CLASS_HID</strong> = 3<br>
+<strong>LIBUSB_CLASS_HUB</strong> = 9<br>
+<strong>LIBUSB_CLASS_IMAGE</strong> = 6<br>
+<strong>LIBUSB_CLASS_MASS_STORAGE</strong> = 8<br>
+<strong>LIBUSB_CLASS_PERSONAL_HEALTHCARE</strong> = 15<br>
+<strong>LIBUSB_CLASS_PER_INTERFACE</strong> = 0<br>
+<strong>LIBUSB_CLASS_PHYSICAL</strong> = 5<br>
+<strong>LIBUSB_CLASS_PRINTER</strong> = 7<br>
+<strong>LIBUSB_CLASS_PTP</strong> = 6<br>
+<strong>LIBUSB_CLASS_SMART_CARD</strong> = 11<br>
+<strong>LIBUSB_CLASS_VENDOR_SPEC</strong> = 255<br>
+<strong>LIBUSB_CLASS_VIDEO</strong> = 14<br>
+<strong>LIBUSB_CLASS_WIRELESS</strong> = 224<br>
+<strong>LIBUSB_CONTROL_SETUP_SIZE</strong> = 8<br>
+<strong>LIBUSB_DT_BOS_MAX_SIZE</strong> = 42<br>
+<strong>LIBUSB_DT_BOS_SIZE</strong> = 5<br>
+<strong>LIBUSB_DT_CONFIG</strong> = 2<br>
+<strong>LIBUSB_DT_CONFIG_SIZE</strong> = 9<br>
+<strong>LIBUSB_DT_DEVICE</strong> = 1<br>
+<strong>LIBUSB_DT_DEVICE_CAPABILITY_SIZE</strong> = 3<br>
+<strong>LIBUSB_DT_DEVICE_SIZE</strong> = 18<br>
+<strong>LIBUSB_DT_ENDPOINT</strong> = 5<br>
+<strong>LIBUSB_DT_ENDPOINT_AUDIO_SIZE</strong> = 9<br>
+<strong>LIBUSB_DT_ENDPOINT_SIZE</strong> = 7<br>
+<strong>LIBUSB_DT_HID</strong> = 33<br>
+<strong>LIBUSB_DT_HUB</strong> = 41<br>
+<strong>LIBUSB_DT_HUB_NONVAR_SIZE</strong> = 7<br>
+<strong>LIBUSB_DT_INTERFACE</strong> = 4<br>
+<strong>LIBUSB_DT_INTERFACE_ASSOCIATION_SIZE</strong> = 8<br>
+<strong>LIBUSB_DT_INTERFACE_SIZE</strong> = 9<br>
+<strong>LIBUSB_DT_PHYSICAL</strong> = 35<br>
+<strong>LIBUSB_DT_REPORT</strong> = 34<br>
+<strong>LIBUSB_DT_SS_ENDPOINT_COMPANION_SIZE</strong> = 6<br>
+<strong>LIBUSB_DT_STRING</strong> = 3<br>
+<strong>LIBUSB_ENDPOINT_ADDRESS_MASK</strong> = 15<br>
+<strong>LIBUSB_ENDPOINT_DIR_MASK</strong> = 128<br>
+<strong>LIBUSB_ENDPOINT_IN</strong> = 128<br>
+<strong>LIBUSB_ENDPOINT_OUT</strong> = 0<br>
+<strong>LIBUSB_ERROR_ACCESS</strong> = -3<br>
+<strong>LIBUSB_ERROR_BUSY</strong> = -6<br>
+<strong>LIBUSB_ERROR_INTERRUPTED</strong> = -10<br>
+<strong>LIBUSB_ERROR_INVALID_PARAM</strong> = -2<br>
+<strong>LIBUSB_ERROR_IO</strong> = -1<br>
+<strong>LIBUSB_ERROR_NOT_FOUND</strong> = -5<br>
+<strong>LIBUSB_ERROR_NOT_SUPPORTED</strong> = -12<br>
+<strong>LIBUSB_ERROR_NO_DEVICE</strong> = -4<br>
+<strong>LIBUSB_ERROR_NO_MEM</strong> = -11<br>
+<strong>LIBUSB_ERROR_OTHER</strong> = -99<br>
+<strong>LIBUSB_ERROR_OVERFLOW</strong> = -8<br>
+<strong>LIBUSB_ERROR_PIPE</strong> = -9<br>
+<strong>LIBUSB_ERROR_TIMEOUT</strong> = -7<br>
+<strong>LIBUSB_FULL_SPEED_OPERATION</strong> = 2<br>
+<strong>LIBUSB_HIGH_SPEED_OPERATION</strong> = 4<br>
+<strong>LIBUSB_HOTPLUG_ENUMERATE</strong> = 1<br>
+<strong>LIBUSB_HOTPLUG_EVENT_DEVICE_ARRIVED</strong> = 1<br>
+<strong>LIBUSB_HOTPLUG_EVENT_DEVICE_LEFT</strong> = 2<br>
+<strong>LIBUSB_HOTPLUG_MATCH_ANY</strong> = -1<br>
+<strong>LIBUSB_HOTPLUG_NO_FLAGS</strong> = 0<br>
+<strong>LIBUSB_ISO_SYNC_TYPE_ADAPTIVE</strong> = 2<br>
+<strong>LIBUSB_ISO_SYNC_TYPE_ASYNC</strong> = 1<br>
+<strong>LIBUSB_ISO_SYNC_TYPE_MASK</strong> = 12<br>
+<strong>LIBUSB_ISO_SYNC_TYPE_NONE</strong> = 0<br>
+<strong>LIBUSB_ISO_SYNC_TYPE_SYNC</strong> = 3<br>
+<strong>LIBUSB_ISO_USAGE_TYPE_DATA</strong> = 0<br>
+<strong>LIBUSB_ISO_USAGE_TYPE_FEEDBACK</strong> = 1<br>
+<strong>LIBUSB_ISO_USAGE_TYPE_IMPLICIT</strong> = 2<br>
+<strong>LIBUSB_ISO_USAGE_TYPE_MASK</strong> = 48<br>
+<strong>LIBUSB_LOG_CB_CONTEXT</strong> = 2<br>
+<strong>LIBUSB_LOG_CB_GLOBAL</strong> = 1<br>
+<strong>LIBUSB_LOG_LEVEL_DEBUG</strong> = 4<br>
+<strong>LIBUSB_LOG_LEVEL_ERROR</strong> = 1<br>
+<strong>LIBUSB_LOG_LEVEL_INFO</strong> = 3<br>
+<strong>LIBUSB_LOG_LEVEL_NONE</strong> = 0<br>
+<strong>LIBUSB_LOG_LEVEL_WARNING</strong> = 2<br>
+<strong>LIBUSB_LOW_SPEED_OPERATION</strong> = 1<br>
+<strong>LIBUSB_OPTION_LOG_CB</strong> = 3<br>
+<strong>LIBUSB_OPTION_LOG_LEVEL</strong> = 0<br>
+<strong>LIBUSB_OPTION_MAX</strong> = 4<br>
+<strong>LIBUSB_OPTION_NO_DEVICE_DISCOVERY</strong> = 2<br>
+<strong>LIBUSB_OPTION_USE_USBDK</strong> = 1<br>
+<strong>LIBUSB_RECIPIENT_DEVICE</strong> = 0<br>
+<strong>LIBUSB_RECIPIENT_ENDPOINT</strong> = 2<br>
+<strong>LIBUSB_RECIPIENT_INTERFACE</strong> = 1<br>
+<strong>LIBUSB_RECIPIENT_OTHER</strong> = 3<br>
+<strong>LIBUSB_REQUEST_CLEAR_FEATURE</strong> = 1<br>
+<strong>LIBUSB_REQUEST_GET_CONFIGURATION</strong> = 8<br>
+<strong>LIBUSB_REQUEST_GET_DESCRIPTOR</strong> = 6<br>
+<strong>LIBUSB_REQUEST_GET_INTERFACE</strong> = 10<br>
+<strong>LIBUSB_REQUEST_GET_STATUS</strong> = 0<br>
+<strong>LIBUSB_REQUEST_SET_ADDRESS</strong> = 5<br>
+<strong>LIBUSB_REQUEST_SET_CONFIGURATION</strong> = 9<br>
+<strong>LIBUSB_REQUEST_SET_DESCRIPTOR</strong> = 7<br>
+<strong>LIBUSB_REQUEST_SET_FEATURE</strong> = 3<br>
+<strong>LIBUSB_REQUEST_SET_INTERFACE</strong> = 11<br>
+<strong>LIBUSB_REQUEST_SYNCH_FRAME</strong> = 12<br>
+<strong>LIBUSB_REQUEST_TYPE_CLASS</strong> = 32<br>
+<strong>LIBUSB_REQUEST_TYPE_RESERVED</strong> = 96<br>
+<strong>LIBUSB_REQUEST_TYPE_STANDARD</strong> = 0<br>
+<strong>LIBUSB_REQUEST_TYPE_VENDOR</strong> = 64<br>
+<strong>LIBUSB_SPEED_FULL</strong> = 2<br>
+<strong>LIBUSB_SPEED_HIGH</strong> = 3<br>
+<strong>LIBUSB_SPEED_LOW</strong> = 1<br>
+<strong>LIBUSB_SPEED_SUPER</strong> = 4<br>
+<strong>LIBUSB_SPEED_SUPER_PLUS</strong> = 5<br>
+<strong>LIBUSB_SPEED_SUPER_PLUS_X2</strong> = 6<br>
+<strong>LIBUSB_SPEED_UNKNOWN</strong> = 0<br>
+<strong>LIBUSB_SUCCESS</strong> = 0<br>
+<strong>LIBUSB_TRANSFER_ADD_ZERO_PACKET</strong> = 8<br>
+<strong>LIBUSB_TRANSFER_CANCELLED</strong> = 3<br>
+<strong>LIBUSB_TRANSFER_COMPLETED</strong> = 0<br>
+<strong>LIBUSB_TRANSFER_ERROR</strong> = 1<br>
+<strong>LIBUSB_TRANSFER_FREE_BUFFER</strong> = 2<br>
+<strong>LIBUSB_TRANSFER_FREE_TRANSFER</strong> = 4<br>
+<strong>LIBUSB_TRANSFER_NO_DEVICE</strong> = 5<br>
+<strong>LIBUSB_TRANSFER_OVERFLOW</strong> = 6<br>
+<strong>LIBUSB_TRANSFER_SHORT_NOT_OK</strong> = 1<br>
+<strong>LIBUSB_TRANSFER_STALL</strong> = 4<br>
+<strong>LIBUSB_TRANSFER_TIMED_OUT</strong> = 2<br>
+<strong>LIBUSB_TRANSFER_TYPE_BULK</strong> = 2<br>
+<strong>LIBUSB_TRANSFER_TYPE_CONTROL</strong> = 0<br>
+<strong>LIBUSB_TRANSFER_TYPE_INTERRUPT</strong> = 3<br>
+<strong>LIBUSB_TRANSFER_TYPE_ISOCHRONOUS</strong> = 1<br>
+<strong>LIBUSB_TRANSFER_TYPE_MASK</strong> = 3<br>
+<strong>LIBUSB_TYPE_CLASS</strong> = 32<br>
+<strong>LIBUSB_TYPE_RESERVED</strong> = 96<br>
+<strong>LIBUSB_TYPE_STANDARD</strong> = 0<br>
+<strong>LIBUSB_TYPE_VENDOR</strong> = 64<br>
+<strong>LITTLE_ENDIAN</strong> = True<br>
+<strong>USB_ENDPOINT_ADDRESS_MASK</strong> = 15<br>
+<strong>USB_ENDPOINT_DIR_MASK</strong> = 128<br>
+<strong>__warningregistry__</strong> = {'version': 0}<br>
+<strong>libusb</strong> = &lt;WinDLL 'C:\Users\Josh\AppData\Roaming\Python\Py...ckages\usb1\libusb-1.0.dll', handle 7ffed21c0000&gt;<br>
+<strong>libusb_alloc_transfer</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_attach_kernel_driver</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_bulk_transfer</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_cancel_transfer</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_capability</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_claim_interface</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_class_code</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_clear_halt</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_close</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_control_transfer</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_descriptor_type</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_detach_kernel_driver</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_endpoint_direction</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_error</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_error_name</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_event_handler_active</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_event_handling_ok</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_exit</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_free_config_descriptor</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_free_device_list</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_free_pollfds</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_free_transfer</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_active_config_descriptor</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_bus_number</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_config_descriptor</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_config_descriptor_by_value</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_configuration</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_device</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_device_address</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_device_descriptor</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_device_list</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_device_speed</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_max_iso_packet_size</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_max_packet_size</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_next_timeout</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_parent</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_pollfds</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_port_number</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_port_numbers</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_string_descriptor_ascii</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_get_version</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_handle_events</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_handle_events_completed</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_handle_events_locked</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_handle_events_timeout</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_handle_events_timeout_completed</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_has_capability</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_hotplug_deregister_callback</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_hotplug_event</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_hotplug_flag</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_hotplug_register_callback</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_init_context</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_interrupt_event_handler</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_interrupt_transfer</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_iso_sync_type</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_iso_usage_type</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_kernel_driver_active</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_lock_event_waiters</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_lock_events</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_log</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_log_level</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_open</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_open_device_with_vid_pid</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_option</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_ref_device</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_release_interface</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_request_recipient</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_request_type</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_reset_device</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_set_auto_detach_kernel_driver</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_set_configuration</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_set_debug</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_set_interface_alt_setting</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_set_log_cb</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_set_pollfd_notifiers</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_setlocale</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_speed</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_standard_request</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_strerror</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_submit_transfer</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_supported_speed</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_transfer_flags</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_transfer_status</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_transfer_type</strong> = &lt;usb1._libusb1.Enum object&gt;<br>
+<strong>libusb_try_lock_events</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_unlock_event_waiters</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_unlock_events</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_unref_device</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_wait_for_event</strong> = &lt;_FuncPtr object&gt;<br>
+<strong>libusb_wrap_sys_device</strong> = &lt;_FuncPtr object&gt;</td></tr></table>
+</body></html>
