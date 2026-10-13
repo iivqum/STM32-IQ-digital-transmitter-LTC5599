@@ -1,7 +1,5 @@
 import usbdevice
 
-
-
 class ltc5599:
     def __init__(self, device):
         self.device = device
@@ -22,6 +20,9 @@ class ltc5599:
         
     def set_lo(self, setting):
         self.write_reg(0x00, setting, 7, 0)
+        
+    def reset(self):
+        self.write_reg(0x08, 1, 1, 3)
         
     def write(self, address, value):
         self.device.write(usbdevice.COMMAND_MOD_WRITE, address.to_bytes(1, usbdevice.ENDIAN) + value.to_bytes(1, usbdevice.ENDIAN))

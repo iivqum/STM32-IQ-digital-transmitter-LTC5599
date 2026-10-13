@@ -204,10 +204,7 @@ class lmx2571:
             
             fvco needs to satisfy the minimum and maximum constraints to lock
         """
-        #self.disable_tx()
-        
-
-        
+        self.disable_tx()
         # Find the output divider combination that gives us a valid VCO
         solution = None
         div1_value = 0

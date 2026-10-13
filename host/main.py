@@ -1,10 +1,19 @@
 import sys
 import time
 import array
-import usb1
-import usbdevice
 import lmx2571
 import ltc5599
+import buffer
+import asyncio
+import threading
+import numpy
+import multiprocessing as mp
+import sampler
+import signal
+import usb1
+import usbdevice
+
+BUFFER_SIZE = 4096 * 4
 
 VENDOR_ID = 1155
 PRODUCT_ID = 22336
@@ -57,40 +66,75 @@ regs = [
 	0x000483
 ]
 
-with usb1.USBContext() as context:
-    handle = context.openByVendorIDAndProductID(VENDOR_ID, PRODUCT_ID)
-    
-    if handle is None:
-        print("USB device not found")
-        sys.exit(0)
-    
-    print("Board OK")
-    
-    handle.claimInterface(1)
-    
-    device = usbdevice.usbdevice(handle)
-    pll = lmx2571.lmx2571(device)
-    modulator = ltc5599.ltc5599(device)
-    
-    pll.write(0, 1 << 13)
-    time.sleep(0.01)
-    
-    for reg in regs:
-        pll.write((reg >> 16) & 0xff, reg & 0xffff)
-        
-    pll.select_f1()
-    pll.set_muxout(lmx2571.MUXOUT_READBACK)
-    pll.set_dithermode(lmx2571.DITHER_STRONG)
-    pll.disable_automute()
-    pll.set_mult(1)
-    pll.set_prescaler(lmx2571.PRESCALER_DIV2)
-    pll.set_predivider(1)
-    pll.set_postdivider(1)
-    pll.set_frequency(446.1)
-    pll.set_power_tx(31)
-   
-    modulator.set_lo(0x32)
-    
-    #pll.set_muxout(lmx2571.MUXOUT_LOCK_DETECT)
+if __name__ == '__main__':
+    cbuf = buffer.circular(BUFFER_SIZE)
+    reader = cbuf.new_reader()
 
-    
+    sample_proc = mp.Process(target = sampler.main, args = (
+        cbuf,
+    ), daemon = True)
+
+    def sigint_handle(sig, frame):
+        device.write_raw(bytearray())
+        sys.exit()
+
+    signal.signal(signal.SIGINT, sigint_handle)
+    sample_proc.start()
+
+    with usb1.USBContext() as context:
+        handle = context.openByVendorIDAndProductID(VENDOR_ID, PRODUCT_ID)
+        
+        if handle is None:
+            print("USB device not found")
+            sys.exit(0)
+        
+        print("Board OK")
+        
+        handle.claimInterface(1)
+        
+        device = usbdevice.usbdevice(handle, context)
+        
+        pll = lmx2571.lmx2571(device)
+        modulator = ltc5599.ltc5599(device)
+
+        pll.write(0, 1 << 13)
+        time.sleep(0.01)
+        
+        for reg in regs:
+            pll.write((reg >> 16) & 0xff, reg & 0xffff)
+            
+        pll.select_f1()
+        pll.set_muxout(lmx2571.MUXOUT_READBACK)
+        pll.set_dithermode(lmx2571.DITHER_STRONG)
+        pll.disable_automute()
+        pll.set_mult(1)
+        pll.set_prescaler(lmx2571.PRESCALER_DIV2)
+        pll.set_predivider(1)
+        pll.set_postdivider(1)
+        pll.set_frequency(446.1)
+        pll.set_power_tx(31)
+        pll.set_muxout(lmx2571.MUXOUT_LOCK_DETECT)
+        
+        modulator.reset()
+        modulator.set_lo(0x32)
+        
+        def test_write_speed():
+            delta = 0
+            bytes = 0
+            buffer = bytearray(64)
+            ba = bytearray()
+            
+            device.write(usbdevice.COMMAND_DAC_STREAM, bytearray())
+            start = time.perf_counter()
+            while 5:
+                try:                
+                    for i in range(8):
+                        cbuf.read_block(buffer, reader)
+                        bytes += device.write_raw(buffer)
+                except:
+                    pass
+            
+            device.write_raw(bytearray())
+            print(bytes / delta / (10 ** 6))    
+
+        test_write_speed()
